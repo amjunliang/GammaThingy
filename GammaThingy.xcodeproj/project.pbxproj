@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		001E848A1BE20544002871BD /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 001E84891BE20544002871BD /* Defaults.plist */; };
+		01DAC8C51ED4440D0073BC0F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DAC8C71ED4440D0073BC0F /* Storyboard.storyboard */; };
 		AFD8E7331BCA711300BCC80A /* GammaController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD8E7321BCA711300BCC80A /* GammaController.m */; };
 		B96BB6511B38DAF500F1C3AE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96BB6501B38DAF500F1C3AE /* Launch Screen.xib */; };
-		B9B2BD3A1BA7B86000514B7A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B2BD391BA7B86000514B7A /* Storyboard.storyboard */; };
 		B9E5364B1B38D90D0097BF90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E5364A1B38D90D0097BF90 /* main.m */; };
 		B9E5364E1B38D90D0097BF90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E5364D1B38D90D0097BF90 /* AppDelegate.m */; };
 		B9E536511B38D90D0097BF90 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E536501B38D90D0097BF90 /* MainViewController.m */; };
@@ -33,13 +33,15 @@
 /* Begin PBXFileReference section */
 		001E84891BE20544002871BD /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		003B30461BE0C96700BFF1E6 /* GammaTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GammaTest.entitlements; sourceTree = "<group>"; };
+		01DAC8C61ED4440D0073BC0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		01DAC8C91ED444100073BC0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Storyboard.strings; sourceTree = "<group>"; };
+		01DAC8CA1ED444830073BC0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Storyboard.strings"; sourceTree = "<group>"; };
 		AFD8E7311BCA711300BCC80A /* GammaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GammaController.h; path = mvc/controller/GammaController.h; sourceTree = "<group>"; };
 		AFD8E7321BCA711300BCC80A /* GammaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GammaController.m; path = mvc/controller/GammaController.m; sourceTree = "<group>"; };
 		B92DD5F81BB33DD700DC6E8F /* BackBoardServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BackBoardServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks/BackBoardServices.framework; sourceTree = DEVELOPER_DIR; };
 		B96BB6501B38DAF500F1C3AE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		B96BB6531B38DDA500F1C3AE /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		B96BB6551B38DDB600F1C3AE /* IOMobileFramebuffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOMobileFramebuffer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework; sourceTree = DEVELOPER_DIR; };
-		B9B2BD391BA7B86000514B7A /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		B9DCA8871BBDF65900C449B0 /* SpringBoardServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpringBoardServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks/SpringBoardServices.framework; sourceTree = DEVELOPER_DIR; };
 		B9E536461B38D90D0097BF90 /* GammaThingy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GammaThingy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E5364A1B38D90D0097BF90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,7 +128,7 @@
 				B9E5364F1B38D90D0097BF90 /* MainViewController.h */,
 				B9E536501B38D90D0097BF90 /* MainViewController.m */,
 				B96BB6501B38DAF500F1C3AE /* Launch Screen.xib */,
-				B9B2BD391BA7B86000514B7A /* Storyboard.storyboard */,
+				01DAC8C71ED4440D0073BC0F /* Storyboard.storyboard */,
 				B9E536551B38D90D0097BF90 /* Assets.xcassets */,
 				B9E5365A1B38D90D0097BF90 /* Info.plist */,
 				001E84891BE20544002871BD /* Defaults.plist */,
@@ -274,7 +276,7 @@
 				001E848A1BE20544002871BD /* Defaults.plist in Resources */,
 				B9E536561B38D90D0097BF90 /* Assets.xcassets in Resources */,
 				B96BB6511B38DAF500F1C3AE /* Launch Screen.xib in Resources */,
-				B9B2BD3A1BA7B86000514B7A /* Storyboard.storyboard in Resources */,
+				01DAC8C51ED4440D0073BC0F /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +296,26 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		01DAC8C71ED4440D0073BC0F /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01DAC8C61ED4440D0073BC0F /* Base */,
+				01DAC8C91ED444100073BC0F /* en */,
+				01DAC8CA1ED444830073BC0F /* zh-Hans */,
+			);
+			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		B9E5365B1B38D90D0097BF90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_GROUP_IDENTIFIER = group.me.ahammer.GammaTest;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -344,6 +360,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_GROUP_IDENTIFIER = group.me.ahammer.GammaTest;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

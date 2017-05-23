@@ -79,6 +79,8 @@ void (*_SBSUndimScreen)();
  */
 /* }}} */
 
+
+
 + (void)setGammaWithRed:(float)red green:(float)green blue:(float)blue {
     if (!loadedSymbols) {
         [self loadSymbols];
@@ -153,41 +155,54 @@ void (*_SBSUndimScreen)();
         data[j + 0x203] = data[b + 0x203];
     }
     
-    error = _IOMobileFramebufferSetGammaTable(fb, data);
+    error = _IOMobileFramebufferSetGammaTable(fb, data);//核心方法
     assert(error == 0);
 }
 
-+ (void)setGammaWithOrangeness:(float)percentOrange {
++ (float )setGammaWithOrangeness:(float)percentOrange {
+
+    float red, blue, green;
     
+    percentOrange = percentOrange - 0.5;
     
-//    percentOrange = percentOrange/7.5;
-//    if (percentOrange > 1)
-//        percentOrange = 1;
-//    else if (percentOrange < 0)
-//        percentOrange = 0;
-//    float blue = 1.0;
-//    float red = 1 - percentOrange;
-//    float green = (red + blue)/2.0;
-//    if (percentOrange == 0) {
-//        red = blue = green = 0.99;
-//    }
-//    
-//    [self setGammaWithRed:red green:green blue:blue];
-    
-    if (percentOrange > 1)
-        percentOrange = 1;
-    else if (percentOrange < 0)
-        percentOrange = 0;
-    
-    float red = 1.0;
-    float blue = 1 - percentOrange;
-    float green = (red + blue)/2.0;
-    
-    if (percentOrange == 0) {
-        red = blue = green = 0.99;
+    if (percentOrange >=0) {
+        
+        if (percentOrange > 1)
+            percentOrange = 1;
+        else if (percentOrange < 0)
+            percentOrange = 0;
+        
+        red = 1.0;//红色不变
+        blue = 1 - percentOrange;//减少蓝色
+        green = (red + blue)/2.0;//增加绿色
+        
+        if (percentOrange == 0) {
+            red = blue = green = 1;
+        }
+        
+    } else {
+        percentOrange = fabs(percentOrange);
+        if (percentOrange > 1)
+            percentOrange = 1;
+        else if (percentOrange < 0)
+            percentOrange = 0;
+        blue = 1.0;//蓝色不变
+        red = 1 - percentOrange;//较少红色
+        green = (red + blue)/2.0;//增加绿色
+        if (percentOrange == 0) {
+            red = blue = green = 0.99;
+        }
+        
+        
+
     }
     
+
+    
+    NSLog(@"red: %f blue: %f green: %f",red,blue,green);
     [self setGammaWithRed:red green:green blue:blue];
+    
+    return percentOrange;
 }
 
 + (void)enableOrangeness {
@@ -202,7 +217,7 @@ void (*_SBSUndimScreen)();
 + (void)disableOrangeness {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [self wakeUpScreenIfNeeded];
-    [GammaController setGammaWithOrangeness:0];
+    [GammaController setGammaWithOrangeness:0.5];
     [defaults setObject:[NSDate date] forKey:@"lastAutoChangeDate"];
     [defaults setBool:NO forKey:@"enabled"];
     [defaults synchronize];

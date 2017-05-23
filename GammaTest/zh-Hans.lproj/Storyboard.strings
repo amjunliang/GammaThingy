@@ -1,0 +1,26 @@
+
+/* Class = "UINavigationItem"; title = "Gamma Thingy"; ObjectID = "0Ef-dU-b7I"; */
+"0Ef-dU-b7I.title" = "色彩调整";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "Eq5-bo-kgF"; */
+"Eq5-bo-kgF.text" = "开始时间";
+
+/* Class = "UITableViewSection"; headerTitle = "Orange-ness"; ObjectID = "L9A-Rq-Viz"; */
+"L9A-Rq-Viz.headerTitle" = "值";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "RxA-j5-K8M"; */
+"RxA-j5-K8M.text" = "结束时间";
+
+/* Class = "UILabel"; text = "Auto Change Enabled"; ObjectID = "qzJ-KF-H8y"; */
+"qzJ-KF-H8y.text" = "自动修改";
+
+/* Class = "UILabel"; text = "Enabled"; ObjectID = "xHz-IQ-upR"; */
+"xHz-IQ-upR.text" = "可用";
+
+/* Class = "UITableViewSection"; footerTitle = "Automatic color changing uses the background fetch feature to turn on or off orangeness. It doesn't happen immediately when the start or end times are passed, and won't work if background app refresh is disabled or iOS 9 low power mode is on. If your device's screen turns on randomly, that's the app making sure the screen is on before changing the color.
+
+IMPORTANT: If you find the display glitching while GammaThingy is enabled, ensure that you have turned OFF 'Reduce White Point' in: Settings / General / Accessibility / Increase Contrast"; ObjectID = "ywG-jw-Vjt"; */
+"ywG-jw-Vjt.footerTitle" = "自动改变颜色使用后台取回特性来打开或关闭orangeness。它不会立即发生时开始或结束时间过去了,和不工作如果背景禁用应用程序刷新或iOS 9低功率模式。如果你的设备的屏幕上随机打开,这是应用程序确保屏幕之前改变颜色。\n\n重要:如果你发现显示故障GammaThingy启用时,确保你关掉“减少白色点”:设置/一般/可访问性/增加对比度";
+
+/* Class = "UITableViewSection"; headerTitle = "Automatic Color Changing"; ObjectID = "ywG-jw-Vjt"; */
+"ywG-jw-Vjt.headerTitle" = "自动颜色改变";

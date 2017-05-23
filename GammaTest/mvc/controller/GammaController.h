@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MainViewController.h"
 
 @interface GammaController : NSObject
 
-+ (void)setGammaWithOrangeness:(float)percentOrange;
+
++ (float)setGammaWithOrangeness:(float)percentOrange;
 + (void)setEnabled:(BOOL)enabled;
 + (void)autoChangeOrangenessIfNeeded;
 

@@ -52,6 +52,7 @@
     autoChangeSwitch.on = [defaults boolForKey:@"autoChangeEnabled"];
     startTimeTextField.text = [_timeFormatter stringFromDate:[self dateForHour:[defaults integerForKey:@"autoStartHour"] andMinute:[defaults integerForKey:@"autoStartMinute"]]];
     endTimeTextField.text = [_timeFormatter stringFromDate:[self dateForHour:[defaults integerForKey:@"autoEndHour"] andMinute:[defaults integerForKey:@"autoEndMinute"]]];
+    
 }
 
 - (IBAction)enabledSwitchChanged:(UISwitch*)sender {
@@ -59,10 +60,14 @@
 }
 
 - (IBAction)maxOrangeSliderChanged:(UISlider*)sender {
+
     [[NSUserDefaults standardUserDefaults] setFloat:sender.value forKey:@"maxOrange"];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"enabled"])
-        [GammaController setGammaWithOrangeness:sender.value];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"enabled"]){
+        self.title = [NSString stringWithFormat:@"当前值:%f",[GammaController setGammaWithOrangeness:sender.value]];
+        
+    }
+
 }
 
 - (IBAction)autoChangeSwitchChanged:(UISwitch*)sender {

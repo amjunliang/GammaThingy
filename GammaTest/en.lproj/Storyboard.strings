@@ -1,0 +1,24 @@
+
+/* Class = "UINavigationItem"; title = "Gamma Thingy"; ObjectID = "0Ef-dU-b7I"; */
+"0Ef-dU-b7I.title" = "Gamma Thingy";
+
+/* Class = "UILabel"; text = "Start Time"; ObjectID = "Eq5-bo-kgF"; */
+"Eq5-bo-kgF.text" = "Start Time";
+
+/* Class = "UITableViewSection"; headerTitle = "Orange-ness"; ObjectID = "L9A-Rq-Viz"; */
+"L9A-Rq-Viz.headerTitle" = "Orange-ness";
+
+/* Class = "UILabel"; text = "End Time"; ObjectID = "RxA-j5-K8M"; */
+"RxA-j5-K8M.text" = "End Time";
+
+/* Class = "UILabel"; text = "Auto Change Enabled"; ObjectID = "qzJ-KF-H8y"; */
+"qzJ-KF-H8y.text" = "Auto Change Enabled";
+
+/* Class = "UILabel"; text = "Enabled"; ObjectID = "xHz-IQ-upR"; */
+"xHz-IQ-upR.text" = "Enabled";
+
+/* Class = "UITableViewSection"; footerTitle = "Automatic color changing uses the background fetch feature to turn on or off orangeness. It doesn't happen immediately when the start or end times are passed, and won't work if background app refresh is disabled or iOS 9 low power mode is on. If your device's screen turns on randomly, that's the app making sure the screen is on before changing the color.  IMPORTANT: If you find the display glitching while GammaThingy is enabled, ensure that you have turned OFF 'Reduce White Point' in: Settings / General / Accessibility / Increase Contrast"; ObjectID = "ywG-jw-Vjt"; */
+"ywG-jw-Vjt.footerTitle" = "Automatic color changing uses the background fetch feature to turn on or off orangeness. It doesn't happen immediately when the start or end times are passed, and won't work if background app refresh is disabled or iOS 9 low power mode is on. If your device's screen turns on randomly, that's the app making sure the screen is on before changing the color.  IMPORTANT: If you find the display glitching while GammaThingy is enabled, ensure that you have turned OFF 'Reduce White Point' in: Settings / General / Accessibility / Increase Contrast";
+
+/* Class = "UITableViewSection"; headerTitle = "Automatic Color Changing"; ObjectID = "ywG-jw-Vjt"; */
+"ywG-jw-Vjt.headerTitle" = "Automatic Color Changing";
