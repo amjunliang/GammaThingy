@@ -158,6 +158,22 @@ void (*_SBSUndimScreen)();
 }
 
 + (void)setGammaWithOrangeness:(float)percentOrange {
+    
+    
+//    percentOrange = percentOrange/7.5;
+//    if (percentOrange > 1)
+//        percentOrange = 1;
+//    else if (percentOrange < 0)
+//        percentOrange = 0;
+//    float blue = 1.0;
+//    float red = 1 - percentOrange;
+//    float green = (red + blue)/2.0;
+//    if (percentOrange == 0) {
+//        red = blue = green = 0.99;
+//    }
+//    
+//    [self setGammaWithRed:red green:green blue:blue];
+    
     if (percentOrange > 1)
         percentOrange = 1;
     else if (percentOrange < 0)

@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UITableViewController <UITextFieldDelegate> {
-    UIDatePicker *timePicker;
-    UIToolbar *timePickerToolbar;
-	NSDateFormatter *timeFormatter;
+    UIDatePicker *_timePicker;
+    UIToolbar *_timePickerToolbar;
+	NSDateFormatter *_timeFormatter;
 }
 @property (weak, nonatomic) IBOutlet UISwitch *enabledSwitch;
 @property (weak, nonatomic) IBOutlet UISlider *maxOrangeSlider;

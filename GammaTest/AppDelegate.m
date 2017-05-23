@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, GammaAction) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //启动执行,设置后台间隔 900
     [application setMinimumBackgroundFetchInterval:900]; //Wake up every 15 minutes at minimum
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{
@@ -33,6 +34,7 @@ typedef NS_ENUM(NSInteger, GammaAction) {
         @"autoEndMinute": [NSNumber numberWithInteger:0]
     }];
     
+    
     if ([application respondsToSelector:@selector(shortcutItems)] && application.shortcutItems.count == 0)
         [self updateShortcutItem];
     
@@ -45,6 +47,7 @@ typedef NS_ENUM(NSInteger, GammaAction) {
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    
     NSDictionary *dict = [self parseQueryString:[url query]];
     
     if ([[url host] isEqualToString:@"orangeness"] && [[url path] isEqualToString:@"/switch"]) {

@@ -19,30 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView.alwaysBounceVertical = NO;
-    
+        
     //Set up auto change start and end time pickers
     
-    timeFormatter = [[NSDateFormatter alloc] init];
-    timeFormatter.timeStyle = NSDateFormatterShortStyle;
-    timeFormatter.dateStyle = NSDateFormatterNoStyle;
+    _timeFormatter = [[NSDateFormatter alloc] init];
+    _timeFormatter.timeStyle = NSDateFormatterShortStyle;
+    _timeFormatter.dateStyle = NSDateFormatterNoStyle;
     
-    timePicker = [[UIDatePicker alloc] init];
-    timePicker.datePickerMode = UIDatePickerModeTime;
-    timePicker.minuteInterval = 15;
-    timePicker.backgroundColor = [UIColor whiteColor];
-    [timePicker addTarget:self action:@selector(timePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+    _timePicker = [[UIDatePicker alloc] init];
+    _timePicker.datePickerMode = UIDatePickerModeTime;
+    _timePicker.minuteInterval = 15;
+    _timePicker.backgroundColor = [UIColor whiteColor];
+    [_timePicker addTarget:self action:@selector(timePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     
-    endTimeTextField.inputView = timePicker;
-    startTimeTextField.inputView = timePicker;
+    endTimeTextField.inputView = _timePicker;
+    startTimeTextField.inputView = _timePicker;
     
-    timePickerToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+    _timePickerToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
     UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(toolbarDoneButtonClicked:)];
-    [timePickerToolbar setItems:@[doneButton]];
+    [_timePickerToolbar setItems:@[doneButton]];
     
-    endTimeTextField.inputAccessoryView = timePickerToolbar;
-    startTimeTextField.inputAccessoryView = timePickerToolbar;
+    endTimeTextField.inputAccessoryView = _timePickerToolbar;
+    startTimeTextField.inputAccessoryView = _timePickerToolbar;
     
     endTimeTextField.delegate = self;
     startTimeTextField.delegate = self;
@@ -52,8 +50,8 @@
     enabledSwitch.on = [defaults boolForKey:@"enabled"];
     maxOrangeSlider.value = [defaults floatForKey:@"maxOrange"];
     autoChangeSwitch.on = [defaults boolForKey:@"autoChangeEnabled"];
-    startTimeTextField.text = [timeFormatter stringFromDate:[self dateForHour:[defaults integerForKey:@"autoStartHour"] andMinute:[defaults integerForKey:@"autoStartMinute"]]];
-    endTimeTextField.text = [timeFormatter stringFromDate:[self dateForHour:[defaults integerForKey:@"autoEndHour"] andMinute:[defaults integerForKey:@"autoEndMinute"]]];
+    startTimeTextField.text = [_timeFormatter stringFromDate:[self dateForHour:[defaults integerForKey:@"autoStartHour"] andMinute:[defaults integerForKey:@"autoStartMinute"]]];
+    endTimeTextField.text = [_timeFormatter stringFromDate:[self dateForHour:[defaults integerForKey:@"autoEndHour"] andMinute:[defaults integerForKey:@"autoEndMinute"]]];
 }
 
 - (IBAction)enabledSwitchChanged:(UISwitch*)sender {
@@ -106,7 +104,7 @@
     }
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:picker.date];
-    currentField.text = [timeFormatter stringFromDate:picker.date];
+    currentField.text = [_timeFormatter stringFromDate:picker.date];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:components.hour forKey:[defaultsKeyPrefix stringByAppendingString:@"Hour"]];
