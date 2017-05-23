@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		001E848A1BE20544002871BD /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 001E84891BE20544002871BD /* Defaults.plist */; };
+		2B79A8431ED495E100B500C8 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B79A8421ED495E100B500C8 /* TextViewController.m */; };
 		AFD8E7331BCA711300BCC80A /* GammaController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD8E7321BCA711300BCC80A /* GammaController.m */; };
 		B96BB6511B38DAF500F1C3AE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96BB6501B38DAF500F1C3AE /* Launch Screen.xib */; };
 		B9B2BD3A1BA7B86000514B7A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B2BD391BA7B86000514B7A /* Storyboard.storyboard */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		001E84891BE20544002871BD /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		003B30461BE0C96700BFF1E6 /* GammaTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GammaTest.entitlements; sourceTree = "<group>"; };
+		2B79A8411ED495E100B500C8 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		2B79A8421ED495E100B500C8 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		AFD8E7311BCA711300BCC80A /* GammaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GammaController.h; path = mvc/controller/GammaController.h; sourceTree = "<group>"; };
 		AFD8E7321BCA711300BCC80A /* GammaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GammaController.m; path = mvc/controller/GammaController.m; sourceTree = "<group>"; };
 		B92DD5F81BB33DD700DC6E8F /* BackBoardServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BackBoardServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/PrivateFrameworks/BackBoardServices.framework; sourceTree = DEVELOPER_DIR; };
@@ -125,6 +128,8 @@
 				AFD8E7321BCA711300BCC80A /* GammaController.m */,
 				B9E5364F1B38D90D0097BF90 /* MainViewController.h */,
 				B9E536501B38D90D0097BF90 /* MainViewController.m */,
+				2B79A8411ED495E100B500C8 /* TextViewController.h */,
+				2B79A8421ED495E100B500C8 /* TextViewController.m */,
 				B96BB6501B38DAF500F1C3AE /* Launch Screen.xib */,
 				B9B2BD391BA7B86000514B7A /* Storyboard.storyboard */,
 				B9E536551B38D90D0097BF90 /* Assets.xcassets */,
@@ -236,13 +241,13 @@
 				TargetAttributes = {
 					B9E536451B38D90D0097BF90 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 323K5AM3T4;
+						DevelopmentTeam = 8KJ785TW2B;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -285,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B79A8431ED495E100B500C8 /* TextViewController.m in Sources */,
 				B9E536511B38D90D0097BF90 /* MainViewController.m in Sources */,
 				B9E5364E1B38D90D0097BF90 /* AppDelegate.m in Sources */,
 				B9E5364B1B38D90D0097BF90 /* main.m in Sources */,
@@ -383,6 +389,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8KJ785TW2B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks",
@@ -403,6 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8KJ785TW2B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks",

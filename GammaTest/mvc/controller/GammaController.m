@@ -158,20 +158,37 @@ void (*_SBSUndimScreen)();
 }
 
 + (void)setGammaWithOrangeness:(float)percentOrange {
+//    if (percentOrange > 1)
+//        percentOrange = 1;
+//    else if (percentOrange < 0)
+//        percentOrange = 0;
+//    
+//    float red = 1.0;
+//    float blue = 1 - percentOrange;
+//    float green = (red + blue)/2.0;
+//    
+//    if (percentOrange == 0) {
+//        red = blue = green = 0.99;
+//    }
+//    
+//    [self setGammaWithRed:red green:green blue:blue];
+//    
+    
+    percentOrange = percentOrange/9;
     if (percentOrange > 1)
         percentOrange = 1;
     else if (percentOrange < 0)
         percentOrange = 0;
     
-    float red = 1.0;
-    float blue = 1 - percentOrange;
+    float blue = 1.0;
+    float red = 1 - percentOrange;
     float green = (red + blue)/2.0;
     
     if (percentOrange == 0) {
-        red = blue = green = 0.99;
+        red = blue = green = 1;
     }
     
-    [self setGammaWithRed:red green:green blue:blue];
+    [self setGammaWithRed:red green:green blue:blue];    
 }
 
 + (void)enableOrangeness {
